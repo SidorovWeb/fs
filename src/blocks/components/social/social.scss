@@ -1,0 +1,44 @@
+.social {
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	&__item {
+		border-radius: 50%;
+		background-color: $social-bg;
+		transition: $transition;
+
+		&:hover {
+			background-color: $gray-icon-hover;
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 14px;
+	}
+
+	&__link {
+		height: 100%;
+		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6.5px;
+
+		& .social__telegram {
+			transform: translateX(-2px);
+		}
+	}
+}
+
+.social__vk,
+.social__facebook,
+.social__telegram,
+.social__instagram {
+	width: 25px;
+	height: 25px;
+	fill: $main-bg;
+}

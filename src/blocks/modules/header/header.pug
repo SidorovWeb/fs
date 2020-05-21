@@ -1,0 +1,17 @@
+include ../../../views/helpers/mixins.pug
+
+.container
+	.header-top.header__top
+		.header__switch-dark-mode
+			include ../../components/switch-dark-mode/switch-dark-mode.pug
+		.header__logo
+			include ../../components/logo/logo.pug
+		.header__nav
+			include ../../components/nav/nav.pug
+		.header__btn
+			button.btn.btn--accent.subscribe-btn Подписаться
+		.header__search
+			button.btn.btn--search.popup-search__button
+				+icon('search', 'header__search')
+		.header__hamburger
+			include ../../components/hamburger/hamburger.pug

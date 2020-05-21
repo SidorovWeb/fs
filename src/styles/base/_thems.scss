@@ -1,0 +1,155 @@
+.them-light {
+	color: $text-light;
+	transition: $transition;
+
+	.card__date {
+		color: $black;
+		background-color: $white;
+		transition: $transition;
+	}
+
+	.card__body {
+		background-color: $white;
+		transition: $transition;
+	}
+
+	.card__title {
+		color: $black;
+		transition: $transition;
+	}
+
+	.card__text {
+		color: $gray;
+		transition: $transition;
+	}
+
+	.card__author {
+		color: $gray;
+		transition: $transition;
+	}
+
+	.switch-dark-mode {
+		.switch-dark-mode__moon {
+			opacity: 1;
+		}
+
+		.switch-dark-mode__sun {
+			opacity: 0;
+		}
+	}
+
+	// article
+	.section-content-article {
+		background-color: $white;
+		transition: $transition;
+	}
+
+	.article__coll__text,
+	.article__footer-text,
+	.article__info-coll {
+		color: $dark;
+		transition: $transition;
+
+	}
+
+	.article__title {
+		color: $dark;
+		transition: $transition;
+
+	}
+
+	.article__title--h3 {
+		color: $dark;
+		transition: $transition;
+
+	}
+
+	.article__footer {
+		border-color: $border-white-them;
+		transition: $transition;
+
+	}
+
+	.article__img-decor,
+	.article__img-decor2 {
+		fill: #E1E4E6;
+		transition: $transition;
+	}
+}
+
+.them-dark {
+	color: $text-dark;
+	transition: $transition;
+
+	.card__date {
+		color: $light-gray;
+		background-color: $dark;
+		transition: $transition;
+	}
+
+	.card__body {
+		background-color: $dark;
+		transition: $transition;
+	}
+
+	.card__title {
+		color: $white;
+		transition: $transition;
+	}
+
+	.card__text {
+		color: $light-gray;
+		transition: $transition;
+	}
+
+	.card__author {
+		color: $light-gray;
+		transition: $transition;
+	}
+
+	.switch-dark-mode {
+		.switch-dark-mode__sun {
+			opacity: 1;
+		}
+
+		.switch-dark-mode__moon {
+			opacity: 0;
+		}
+	}
+
+	// article
+
+	.section-content-article {
+		background-color: $dark;
+		transition: $transition;
+	}
+
+	.article__coll-text,
+	.article__footer-text,
+	.article__info-coll {
+		color: $light-gray;
+		transition: $transition;
+	}
+
+	.article__title {
+		color: $white;
+		transition: $transition;
+	}
+
+	.article__title--h3 {
+		color: $white;
+		transition: $transition;
+	}
+
+	.article__footer {
+		border-color: $border-dark-them;
+		transition: $transition;
+	}
+
+	.article__img-decor,
+	.article__img-decor2 {
+		fill: #38424C;
+		transition: $transition;
+	}
+
+}

@@ -1,0 +1,24 @@
+extends ../layouts/default
+include ../../blocks/components/card/card-md.pug
+
+block variables
+	- const title = "article";
+	- const name = 'article-page'
+
+block content
+	include ../../blocks/modules/hero/hero.pug
+	section.s-section.section-content-article
+		.container
+			include ../../blocks/modules/article/article.pug
+	section.s-section.section-group-article
+		.container
+			.grid
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/8','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/8','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/2','6', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

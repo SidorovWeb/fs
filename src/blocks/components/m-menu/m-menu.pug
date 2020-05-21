@@ -1,0 +1,53 @@
+include ../card/card-md.pug
+.m-menu
+	.m-menu__content
+		.m-menu__body
+			.request-passed.m-menu__request-passed
+				.container
+					.request-passed__title.m-menu__passed-title
+						span Ура!
+						span Поиск прошел удачно
+					.grid.m-menu__grid
+						.grid__item.coll-4.coll-md-12
+							+card-md('img/content/1','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+						.grid__item.coll-4.coll-md-12
+							+card-md('img/content/8','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+						.grid__item.coll-4.coll-md-12
+							+card-md('img/content/2','6', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+						.grid__item.coll-4.coll-md-12
+							+card-md('img/content/7','6', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+			.request-error.m-menu__request-error
+				.container
+					.request-error__body
+						.request-error__img
+							+icon('error', 'request-error__icon')
+						.request-error__text
+							.request-error__text-1 К сожалению мы ничего не смогли найти для вас
+							.request-error__text-2 Попробуйте изменить поисковый запрос
+			.m-menu__nav
+				.container
+					include ../nav/nav.pug
+		.m-menu__footer
+			.form.m-menu__form
+				.container
+					form.m-menu__form__form(action='#')
+						input.form__input.m-menu__input(name='user_name', type='search', placeholder='Что ищем?')
+						button.btn.m-menu__form-btn(name='submit', type='submit')
+							+icon('search', 'm-menu__form-icon')
+			.m-menu__social
+				.container
+					.m-menu__text Мы в соцсетях
+					.social
+						ul.social__list
+							li.social__item.m-menu__social-item
+								a(href="#").social__link
+									+icon('vk', 'social__vk')
+							li.social__item.m-menu__social-item
+								a(href="#").social__link
+									+icon('facebook', 'social__facebook')
+							li.social__item.m-menu__social-item
+								a(href="#").social__link
+									+icon('telegram', 'social__telegram')
+							li.social__item.m-menu__social-item
+								a(href="#").social__link
+									+icon('instagram', 'social__instagram')

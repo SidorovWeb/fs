@@ -1,0 +1,111 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/card/card-md.pug
+include ../blocks/components/card/card-small.pug
+
+block variables
+	- const title = "Главная"
+	- const name = "main-page"
+
+block content
+	//- hero block
+	include ../blocks/modules/hero/hero.pug
+	//- Контент на desktop
+	section.s-section.section-content-main.section-content-desktop
+		.container
+			.grid
+				.grid__item.coll-8.coll-md-12
+					include ../blocks/components/card/card-xl.pug
+				.grid__item.coll-4.order-md
+					include ../blocks/components/card/block-info.pug
+				.grid__item.coll-4.row-2.coll-md-6
+					+card-md('img/content/2','6', '#Обновления', 'Добавлена повторная публикация отклоненных файлов в стоки !')
+				.grid__item.coll-4.row-2.coll-md-6
+					+card-md('img/content/3','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.order-md
+					+card-small('img/content/4','4', '#Обновления', 'Визуальное отображение загрузки')
+				.grid__item.coll-4.order-md
+					article.card.card--small
+						a(href="#").card__img.card__img-svg.w160
+							+icon('photo-error', 'card-small__svg')
+							.date.card__date.card__date--tr.card__date--small
+								.card__date-number 2
+								.card__date-text мин
+						.card__body
+							a(href="#").tag.card__tag #Обучение
+							a(href="#").card__link
+									h2.h2-small.card__title Проблемы с FTP сервером Depositphotos
+							.author.card__author
+								span.author__date 3 месяца назад
+								span.author__name Галкин Жека
+				.grid__item.coll-12
+					include ../blocks/components/card/card-long.pug
+				.grid__item.coll-6.coll-md-6
+					article.card.card--small.smallLong
+						a(href="#").card__img.card__img-svg.w220
+							+icon('error', 'card-small__svg')
+							.date.card__date.card__date--tr.card__date--small
+								.card__date-number 1
+								.card__date-text мин
+						.card__body
+							a(href="#").tag.card__tag #Обучение
+							a(href="#").card__link
+								h2.h2-md.card__title Технические работы на стоке
+							.card__text
+								p В связи с резко увеличившимися объемами загрузки и публикации файлов, наши серверные мощности не справились с работой
+							.author.card__author
+								span.author__date 1 час назад
+								span.author__name Галкин Жека
+				.grid__item.coll-6.coll-md-6
+					article.card.card--small.smallLong
+						a(href="#").card__img.w220
+							+img('img/content/6','200','220','alt','data:image/gif;base64,R0lGODlhCgALAIAAAP///wAAACH5BAEAAAEALAAAAAAKAAsAAAIJjI+py+0Po0wFADs=')
+							.date.card__date.card__date--tr.card__date--small
+								.card__date-number 1
+								.card__date-text мин
+						.card__body
+							a(href="#").tag.card__tag #Обновления
+							a(href="#").card__link
+								h2.h2-md.card__title Добавлена возможность «Выбрать все стоки»
+							.card__text
+								p Это наш первый урок, на котором мы расскажем об основных инструментах сервиса
+							.author.card__author
+								span.author__date 1 час назад
+								span.author__name Галкин Жека
+				.grid__item.row-2.coll-4.coll-md-6
+					+card-md('img/content/7','6', '#Обновления', 'Увеличено место в облачном хранилище !')
+				.grid__item.row-2.coll-4.coll-md-6
+					+card-md('img/content/8','5', '#Экспертное_мнение', 'Улучшен процесс загрузки файлов по FTP')
+				.grid__item.coll-4.coll-md-6
+					+card-small('img/content/4','4', '#Обновления', 'Визуальное отображение загрузки')
+				.grid__item.coll-4.coll-md-6
+					article.card.card--small
+						a(href="#").card__img.card__img-svg.w160
+							+icon('photo-error', 'card-small__svg')
+							.date.card__date.card__date--tr.card__date--small
+								.card__date-number 2
+								.card__date-text мин
+						.card__body
+							a(href="#").tag.card__tag #Обучение
+							a(href="#").card__link
+									h2.h2-small.card__title Проблемы с FTP сервером Depositphotos
+							.author.card__author
+								span.author__date 3 месяца назад
+								span.author__name Галкин Жека
+	//- Контент на mobile ПОСЛЕДНИИ 4 НОВОСТИ
+	section.s-section.section-content-mobile
+		.container
+			.grid
+				.grid__item.coll-4.coll-md-12
+					include ../blocks/components/card/block-info.pug
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/1','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/8','5', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/2','6', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+				.grid__item.coll-4.coll-md-12
+					+card-md('img/content/7','6', '#Экспертное_мнение', 'Добавлены несколько индикаторов цвета на один файл')
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

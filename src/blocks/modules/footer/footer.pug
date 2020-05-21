@@ -1,0 +1,29 @@
+.container.footer__container
+	.footer__body
+		.footer__switch-dark-mode
+			include ../../components/switch-dark-mode/switch-dark-mode.pug
+		if title == 'article'
+			.date.footer__date
+				.footer-date__number 6
+				.footer-date__text мин
+		.footer__block
+			if title == 'article'
+				a(href="#").footer__link Поделиться статьей
+				.footer__social
+					.social
+						ul.social__list
+							li.social__item
+								a(href="#").social__link
+									+icon('vk', 'social__vk')
+							li.social__item
+								a(href="#").social__link
+									+icon('facebook', 'social__facebook')
+							li.social__item
+								a(href="#").social__link
+									+icon('telegram', 'social__telegram')
+			else
+				.footer__text Мы в соцсетях
+				.footer__social
+					include ../../components/social/social.pug
+
+

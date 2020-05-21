@@ -1,0 +1,132 @@
+.h2-xl {
+	font-size: 35px;
+	line-height: 35px;
+	font-family: $p-bold;
+}
+
+.h2-md {
+	font-size: 24px;
+	line-height: 26px;
+	font-family: $p-bold;
+
+	@include media-sm {
+		line-height: 24px;
+	}
+}
+
+.h2-small {
+	font-size: 20px;
+	line-height: 22px;
+	font-family: $p-bold;
+
+	@include media-md {
+		font-size: 24px;
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 01;
+	}
+}
+
+.tag {
+	display: block;
+	font-size: 16px;
+	font-family: $p-bold;
+}
+
+.circle {
+	border-radius: 50%;
+	position: absolute;
+
+	&--md {
+		width: 137px;
+		height: 137px;
+		top: 392px;
+		left: -67px;
+	}
+
+	&--md-2 {
+		width: 218px;
+		height: 218px;
+		top: 848px;
+		right: -117px;
+	}
+
+	&--small {
+		width: 29px;
+		height: 29px;
+		top: 525px;
+		left: 65px;
+	}
+
+	&--small-2 {
+		width: 50px;
+		height: 50px;
+		top: 823px;
+		right: 120px;
+	}
+
+	&--blue {
+		background-color: $blue-light;
+	}
+
+	&--accent {
+		background-color: $accent;
+	}
+}
+
+.author {
+	font-size: 12px;
+}
+
+
+.progress-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: transparent;
+	height: 10px;
+	width: 100%;
+
+	@include media-sm {
+		height: 6px;
+		position: fixed !important;
+		bottom: 65px !important;
+		top: inherit !important;
+	}
+}
+
+.progress-bar {
+	background-color: $accent;
+	height: 10px;
+	width: 0%;
+
+	@include media-sm {
+		height: 6px;
+	}
+}
+
+.pos-footer {
+	position: absolute;
+	top: -10px;
+}

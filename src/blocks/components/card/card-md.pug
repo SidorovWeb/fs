@@ -1,0 +1,14 @@
+mixin card-md(img,dateNum,tag,title)
+	article.card.card--medium
+		a(href="#").card__img
+			+img(img,'380','300','alt','data:image/gif;base64,R0lGODlhEwAPAIAAAP///wAAACH5BAEAAAEALAAAAAATAA8AAAIPjI+py+0Po5y02ouz3q0AADs=')
+			.date.card__date.card__date--br.card__date--big
+				.card__date-number=dateNum
+				.card__date-text мин
+		.card__body
+			a(href="#").tag.card__tag=tag
+			a(href="#").card__link
+				h2.h2-md.card__title=title
+			.author.card__author
+				span.author__date 3 месяца назад
+				span.author__name Галкин Жека

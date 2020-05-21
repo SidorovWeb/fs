@@ -1,0 +1,36 @@
+
+.popup-search(data-modal)
+	button.btn.popup__close(type='button')
+		+icon('close', 'popup__close-icon')
+	.popup__dialog
+		.container
+			.popup__content
+				.popup__head
+					a(href="#").popup__logo
+						picture
+							source(srcset="img/logo/logo-group.webp", type='image/webp')
+							img.popup-logo__img( alt="Лого", src="img/logo/logo-group.png", height="60", width="348")
+				.popup__body.popup-search__body
+					.form.popup__form
+						form.form__form.popup-search__form(action='#')
+							input.form__input.popup-search__input(name='user_name', type='search', placeholder='Что ищем?')
+							button.btn.btn--accent.form__btn.popup-search__btn(name='submit', type='submit') Найти
+					.popup__nav
+						include ../nav/nav.pug
+					.request-passed.popup-search__request-passed
+						.container
+							include ../card/card-long.pug
+							include ../card/card-long.pug
+							include ../card/card-long.pug
+							include ../card/card-long.pug
+					.request-error.popup-search__request-error
+						.container
+							.request-error__body
+								.request-error__img
+									+icon('error', 'request-error__icon')
+								.request-error__text
+									p К сожалению мы ничего не смогли найти для вас
+
+		.popup__social
+			span.popup__social-text Мы в соцсетях
+			include ../social/social.pug
